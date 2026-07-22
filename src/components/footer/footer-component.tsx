@@ -13,39 +13,37 @@ export default function FooterComponent(): ReactNode {
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
-        <div className={styles.grid}>
-          <div className={styles.text}>
-            <p className={styles.logo}>My Doctor</p>
-            <p className={styles.desc}>
-              helps you find trusted doctors, read patient reviews, and book
-              appointments with ease.
-            </p>
-          </div>
+        <div className={styles.text}>
+          <p className={styles.logo}>My Doctor</p>
+          <p className={styles.desc}>
+            is a trusted healthcare platform that helps patients find qualified
+            doctors, compare ratings and verified patient reviews, and book
+            appointments online quickly, securely, and with confidence
+          </p>
+        </div>
 
+        <div className={styles.grid}>
+          <p className={styles["copy-right"]}>
+            © {year} My Doctor. All rights reserved.
+          </p>
           <ul className={styles.icons}>
             <li>
               <Link href="https://www.linkedin.com/in/poya-faraji/">
                 <MingcuteLinkedinFill width={"1.2rem"} height={"1.2rem"} />
               </Link>
             </li>
-
             <li>
               <Link href="https://github.com/Poya-Faraji">
                 <MingcuteGithub2Fill width={"1.2rem"} height={"1.2rem"} />
               </Link>
             </li>
-
             <li>
               <Link href="https://t.me/poya_faraji">
                 <MingcuteTelegramFill width={"1.2rem"} height={"1.2rem"} />
               </Link>
-            </li> 
+            </li>
           </ul>
         </div>
-
-        <p className={styles["copy-right"]}>
-          © {year} My Doctor. All rights reserved.
-        </p>
       </div>
     </footer>
   );

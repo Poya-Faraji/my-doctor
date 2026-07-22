@@ -30,6 +30,10 @@ export default function RootLayout({
       <body>
         <HeaderComponent />
         <main>{children}</main>
+        <p className="tagline">
+          Your trusted platform for finding healthcare professionals and booking
+          appointments online.
+        </p>
         <FooterComponent />
       </body>
     </html>

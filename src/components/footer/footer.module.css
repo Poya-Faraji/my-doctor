@@ -3,40 +3,41 @@
 
   .container {
     padding-block: 2rem;
+    .logo {
+      margin-block-end: 0.25rem;
+      font-weight: 700;
+      font-size: var(--fz-700);
+    }
+    .desc {
+      margin-block-start: 0.5rem;
+      margin-block-end: 1rem;
+      max-inline-size: 80%;
+      font-size: var(--fz-500);
+    }
+
+    .icons {
+      display: flex;
+      gap: 0.5rem;
+      justify-self: end;
+    }
+
+    @media (width < 720px) {
+      display: grid;
+      grid-template-columns: 1fr;
+
+      .icons {
+        margin-block: 0.5rem;
+        justify-self: center;
+      }
+    }
 
     .grid {
       display: grid;
       grid-template-columns: 3fr 1fr;
 
-      .logo {
-        margin-block-end: 0.25rem;
-        font-weight: 700;
-        font-size: var(--fz-600);
+      .copy-right {
+        font-size: var(--fz-500);
       }
-      .desc {
-        margin-block-start: 0.5rem;
-        margin-block-end: 1rem;
-      }
-
-      .icons {
-        display: flex;
-        gap: 0.5rem;
-        justify-self: end;
-      }
-
-      @media (width < 720px) {
-        display: grid;
-        grid-template-columns: 1fr;
-
-        .icons {
-          margin-block: 0.5rem;
-          justify-self: center;
-        }
-      }
-    }
-
-    .copy-right {
-      text-align: center;
     }
   }
 }
