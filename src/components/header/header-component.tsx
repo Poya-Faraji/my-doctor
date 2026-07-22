@@ -10,8 +10,6 @@ import clsx from "clsx";
 export default function HeaderComponent(): ReactNode {
   const pathname = usePathname();
 
-  console.log(pathname);
-
   return (
     <header className={styles.header}>
       <nav>
@@ -22,7 +20,12 @@ export default function HeaderComponent(): ReactNode {
             </Link>
           </li>
           <li>
-            <Link href="/search">Search</Link>
+            <Link
+              href="/search"
+              className={clsx(pathname === "/search" && styles.active)}
+            >
+              Search
+            </Link>
           </li>
         </ul>
       </nav>
