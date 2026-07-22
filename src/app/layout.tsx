@@ -10,7 +10,7 @@ import HeaderComponent from "@/components/header/header-component";
 import FooterComponent from "@/components/footer/footer-component";
 
 export const metadata: Metadata = {
-  title: "My doctor",
+  title: "My Doctor",
   description:
     "Find trusted doctors, read verified patient reviews, compare ratings, and book appointments online with Doctor Point. Fast, simple, and secure healthcare scheduling.",
 };
