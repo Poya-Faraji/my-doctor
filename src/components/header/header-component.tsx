@@ -10,23 +10,33 @@ import clsx from "clsx";
 export default function HeaderComponent(): ReactNode {
   const pathname = usePathname();
 
+  const navItems = [
+    {
+      url: "/",
+      name: "Home",
+    },
+    {
+      url: "/search",
+      name: "Search",
+    },
+  ];
+
   return (
     <header className={styles.header}>
       <nav>
         <ul>
-          <li>
-            <Link href="/" className={clsx(pathname === "/" && styles.active)}>
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/search"
-              className={clsx(pathname === "/search" && styles.active)}
-            >
-              Search
-            </Link>
-          </li>
+          {navItems.map((item, index) => {
+            return (
+              <li key={index}>
+                <Link
+                  href={item.url}
+                  className={clsx(pathname === item.url && styles.active)}
+                >
+                  {item.name}
+                </Link>
+              </li>
+            );
+          })}
         </ul>
       </nav>
       <button className={styles["call-to-action"]}>login | register</button>
