@@ -5,6 +5,9 @@ import { Roboto } from "next/font/google";
 
 import "./page.module.css";
 
+import "./globals.css";
+import HeaderComponent from "@/components/header/header-component";
+
 export const metadata: Metadata = {
   title: "My doctor",
   description:
@@ -23,7 +26,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={roboto.className}>
-      <body>{children}</body>
+      <body>
+        <HeaderComponent />
+        <main>{children}</main>
+      </body>
     </html>
   );
 }
