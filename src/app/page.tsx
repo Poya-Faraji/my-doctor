@@ -10,8 +10,8 @@ export default function Home(): ReactNode {
   return (
     <div className={styles.home}>
       <h1>
-        <MyDoctorLogo />
         My doctor
+        <MyDoctorLogo />
       </h1>
       <GlobalSearchBoxComponent />
       <div className={styles.history}>
