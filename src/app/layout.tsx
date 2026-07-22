@@ -7,6 +7,7 @@ import "./page.module.css";
 
 import "./globals.css";
 import HeaderComponent from "@/components/header/header-component";
+import FooterComponent from "@/components/footer/footer-component";
 
 export const metadata: Metadata = {
   title: "My doctor",
@@ -29,6 +30,7 @@ export default function RootLayout({
       <body>
         <HeaderComponent />
         <main>{children}</main>
+        <FooterComponent />
       </body>
     </html>
   );
