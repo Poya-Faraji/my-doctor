@@ -7,6 +7,8 @@ import MyDoctorLogo from "@/logo/my-doctor";
 import styles from "@/app/page.module.css";
 
 export default function Home(): ReactNode {
+  throw new Error("Not implemented yet");
+
   return (
     <div className={styles.home}>
       <h1>
