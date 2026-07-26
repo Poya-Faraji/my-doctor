@@ -5,7 +5,7 @@ import notFoundImage from "@/assets/illustrations/not-found.svg";
 
 import GlobalSearchBoxComponent from "@/components/global-search-box/global-search-box.component";
 
-import styles from "./not-found.module.css";
+import styles from "@/app/not-found.module.css";
 
 export default function NotFound(): ReactElement {
   return (
@@ -14,8 +14,8 @@ export default function NotFound(): ReactElement {
         <div className={styles["status-code"]}>Error 404</div>
         <h1>Page you are looking is not found</h1>
         <p>
-          Please search for your desired doctor or treatment center using
-          the search box.
+          Please search for your desired doctor or treatment center using the
+          search box.
         </p>
       </div>
       <div className={styles.visuals}>

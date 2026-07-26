@@ -8,10 +8,10 @@ import FooterComponent from "@/components/footer/footer-component";
 
 import "@/styles/colors.css";
 import "@/styles/typography.css";
-import "./page.module.css";
-import "./globals.css";
+import "@/app/page.module.css";
+import "@/app/globals.css";
 
-export const metadata: Metadata = { 
+export const metadata: Metadata = {
   title: "My Doctor",
   description:
     "Find trusted doctors, read verified patient reviews, compare ratings, and book appointments online with Doctor Point. Fast, simple, and secure healthcare scheduling.",

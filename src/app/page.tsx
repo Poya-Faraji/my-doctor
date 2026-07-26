@@ -4,7 +4,7 @@ import GlobalSearchBoxComponent from "@/components/global-search-box/global-sear
 
 import MyDoctorLogo from "@/logo/my-doctor";
 
-import styles from "./page.module.css";
+import styles from "@/app/page.module.css";
 
 export default function Home(): ReactNode {
   return (

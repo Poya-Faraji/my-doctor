@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 import MingcuteLocationLine from "@/icons/MingcuteLocationLine";
 import MingcuteSearchLine from "@/icons/MingcuteSearchLine";
 
-import styles from "./global-search-box.module.css";
+import styles from "@/components/global-search-box/global-search-box.module.css";
 
 export default function GlobalSearchBoxComponent(): ReactNode {
   return (

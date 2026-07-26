@@ -1,11 +1,12 @@
 "use client";
 
 import type { ReactNode } from "react";
-
-import styles from "./header.module.css";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+
 import clsx from "clsx";
+
+import styles from "@/components/header/header.module.css";
 
 export default function HeaderComponent(): ReactNode {
   const pathname = usePathname();

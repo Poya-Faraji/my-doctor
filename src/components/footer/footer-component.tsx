@@ -5,7 +5,7 @@ import MingcuteLinkedinFill from "@/icons/MingcuteLinkedinFill";
 import MingcuteTelegramFill from "@/icons/MingcuteTelegramFill";
 import MingcuteGithub2Fill from "@/icons/MingcuteGithub2Fill";
 
-import styles from "./footer.module.css";
+import styles from "@/components/footer/footer.module.css";
 
 export default function FooterComponent(): ReactNode {
   const year = new Date().getFullYear();
