@@ -1,5 +1,5 @@
 .footer {
-  background-color: var(--color-gray-12);
+  background-color: var(--color-surface-500);
 
   .container {
     padding-block: 2rem;
@@ -23,7 +23,8 @@
 
       > li {
         a {
-          font-size: var(--fz-500);
+          color: var(--color-text-700);
+          font-size: 1em;
         }
       }
     }

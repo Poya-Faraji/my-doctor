@@ -1,5 +1,5 @@
 :root {
-  --border-radius: 0.875rem;
+  --border-radius: 0.75rem;
 
   --full-width: 75rem;
   --full-width-padding-inline: calc(max(100% - var(--full-width), 2rem) / 2);
@@ -23,7 +23,9 @@ p {
 }
 
 html {
-  color-scheme: dark;
+  color-scheme: light;
+  accent-color: var(--color-primary);
+  caret-color: var(--color-primary);
 }
 
 input,
@@ -40,6 +42,9 @@ optgroup {
   font: inherit;
 }
 
+p {
+  color: var(--color-text-700);
+}
 ul {
   list-style: none;
 }
@@ -51,13 +56,13 @@ a {
 }
 
 body {
-  background-color: var(--color-default-background);
-  color: var(--color-default-foreground);
+  background-color: var(--color-surface-400);
+  color: var(--color-text-400);
 
   font-size: var(--fz-400);
 
   display: grid;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: auto 1fr auto auto;
 
   min-block-size: 100dvb;
   > * {
@@ -67,7 +72,7 @@ body {
   .tagline {
     margin-block-start: 1.5rem;
 
-    background-color: var(--color-gray-16);
+    background-color: var(--color-surface-300);
     padding-block: 1rem;
     text-align: center;
   }
