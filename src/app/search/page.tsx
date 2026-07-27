@@ -14,9 +14,9 @@ const OddOrEvenOptions = [
 ];
 
 const DividieOptions = [
-  { key: "three" as keyof FiltersType, label: "Divide by 3" },
-  { key: "five" as keyof FiltersType, label: "Divide by 5" },
-  { key: "seven" as keyof FiltersType, label: "Divide by 7" },
+  { key: "divByThree" as keyof FiltersType, label: "Divide by 3" },
+  { key: "divByFive" as keyof FiltersType, label: "Divide by 5" },
+  { key: "divBySeven" as keyof FiltersType, label: "Divide by 7" },
 ];
 
 export default function SearchPage(): ReactNode {

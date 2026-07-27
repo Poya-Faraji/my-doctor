@@ -4,13 +4,11 @@
 
   background-color: transparent;
   color: inherit;
-
   border: 1px solid currentColor;
+
   border-radius: var(--border-radius);
 
   &.active {
     background-color: var(--color-primary);
-    color: var(--color-primary-opposite);
-    border-color: var(--color-primary);
   }
 }
