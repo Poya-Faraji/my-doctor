@@ -1,0 +1,47 @@
+.page {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+
+  gap: 1rem;
+
+  .filter {
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 0.5rem;
+      margin-block-start: 1rem;
+
+      > * {
+        flex: 1 0 auto;
+      }
+    }
+  }
+
+  .result {
+    ul {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+
+      gap: 0.5rem;
+      aspect-ratio: 1/1;
+
+      > li {
+        display: grid;
+        place-content: center;
+
+        background-color: transparent;
+        color: inherit;
+
+        border: 1px solid currentColor;
+        border-radius: var(--border-radius);
+
+        &.active {
+          background-color: var(--color-primary);
+          color: var(--color-primary-opposite);
+          border-color: var(--color-primary);
+        }
+      }
+    }
+  }
+}
