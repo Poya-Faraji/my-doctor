@@ -2,8 +2,11 @@ import type { ReactNode } from "react";
 
 import clsx from "clsx";
 
-import styles from "@/app/search/page.module.css";
+import FilterProvider from "./providers/filters.provider";
+
 import FilterComponent from "./components/filter/filter.component";
+
+import styles from "@/app/search/page.module.css";
 
 const numbers = Array(100)
   .fill(null)
@@ -22,26 +25,27 @@ const DividieOptions = [
 
 export default function SearchPage(): ReactNode {
   return (
-    <div className={styles.page}>
-      <div className={styles.filter}>
-        <FilterComponent title="Odd or Even" options={OddOrEvenOptions} />
-        <FilterComponent title="Dividable" options={DividieOptions} />
+    <FilterProvider>
+      <div className={styles.page}>
+        <div className={styles.filter}>
+          <FilterComponent title="Odd or Even" options={OddOrEvenOptions} />
+          <FilterComponent title="Dividable" options={DividieOptions} />
+        </div>
+        <div className={styles.result}>
+          <ul>
+            {numbers.map((number) => {
+              return (
+                <li
+                  className={clsx(number % 2 === 0 && styles.active)}
+                  key={number}
+                >
+                  {number}
+                </li>
+              );
+            })}
+          </ul>
+        </div>
       </div>
-
-      <div className={styles.result}>
-        <ul>
-          {numbers.map((number) => {
-            return (
-              <li
-                className={clsx(number % 2 === 0 && styles.active)}
-                key={number}
-              >
-                {number}
-              </li>
-            );
-          })}
-        </ul>
-      </div>
-    </div>
+    </FilterProvider>
   );
 }
