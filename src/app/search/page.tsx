@@ -1,26 +1,22 @@
 import type { ReactNode } from "react";
 
-import clsx from "clsx";
-
 import FilterProvider from "./providers/filters.provider";
 
 import FilterComponent from "./components/filter/filter.component";
 
 import styles from "@/app/search/page.module.css";
-
-const numbers = Array(100)
-  .fill(null)
-  .map((_, i) => i + 1);
+import { FiltersType } from "./types/filters.types";
+import ListComponent from "./components/results/list.component";
 
 const OddOrEvenOptions = [
-  { key: "odd", label: "odd" },
-  { key: "even", label: "even" },
+  { key: "odd" as keyof FiltersType, label: "odd" },
+  { key: "even" as keyof FiltersType, label: "even" },
 ];
 
 const DividieOptions = [
-  { key: "three", label: "Divide by 3" },
-  { key: "five", label: "Divide by 5" },
-  { key: "seven", label: "Divide by 7" },
+  { key: "three" as keyof FiltersType, label: "Divide by 3" },
+  { key: "five" as keyof FiltersType, label: "Divide by 5" },
+  { key: "seven" as keyof FiltersType, label: "Divide by 7" },
 ];
 
 export default function SearchPage(): ReactNode {
@@ -32,18 +28,7 @@ export default function SearchPage(): ReactNode {
           <FilterComponent title="Dividable" options={DividieOptions} />
         </div>
         <div className={styles.result}>
-          <ul>
-            {numbers.map((number) => {
-              return (
-                <li
-                  className={clsx(number % 2 === 0 && styles.active)}
-                  key={number}
-                >
-                  {number}
-                </li>
-              );
-            })}
-          </ul>
+          <ListComponent />
         </div>
       </div>
     </FilterProvider>
