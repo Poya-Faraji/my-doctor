@@ -15,8 +15,17 @@ type ContextValue = {
   clearFilters: () => void;
 };
 
+const defaultFilters: FiltersType = {
+  odd: true,
+  even: true,
+  all: true,
+  divByThree: true,
+  divByFive: true,
+  divBySeven: true,
+};
+
 export const FiltersContext = createContext<ContextValue>({
-  filters: {},
+  filters: { ...defaultFilters },
   changeFilter: () => {},
   removeFilter: () => {},
   clearFilters: () => {},
@@ -25,7 +34,7 @@ export const FiltersContext = createContext<ContextValue>({
 type Props = PropsWithChildren;
 
 export default function FilterProvider({ children }: Props): ReactNode {
-  const [filters, setFilters] = useState<FiltersType>({});
+  const [filters, setFilters] = useState<FiltersType>({ ...defaultFilters });
 
   const changeFilter = <TKey extends keyof FiltersType>(
     key: TKey,
@@ -43,7 +52,7 @@ export default function FilterProvider({ children }: Props): ReactNode {
   };
 
   const clearFilters = (): void => {
-    setFilters({});
+    setFilters({ ...defaultFilters });
   };
 
   return (

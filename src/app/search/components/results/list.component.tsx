@@ -1,19 +1,19 @@
 "use client";
-import { ReactNode } from "react";
+import { ReactNode, useContext } from "react";
 
 import styles from "@/app/search/components/results/list.module.css";
 import ItemComponent from "../item/item.component";
+import { ItemsContext } from "../../providers/items/items.provider";
 
-const numbers = Array(100)
-  .fill(null)
-  .map((_, i) => i + 1);
 
 export default function ListComponent(): ReactNode {
+
+  const {filteredItems} = useContext(ItemsContext)
   return (
     <div className={styles.results}>
       <ul>
-        {numbers.map((number) => {
-          return <ItemComponent item={number} key={number} />;
+        {filteredItems.map((number) => {
+          return <ItemComponent  key={number.value}  item={number}/>;
         })}
       </ul>
     </div>
