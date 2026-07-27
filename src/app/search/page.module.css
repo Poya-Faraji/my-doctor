@@ -4,20 +4,7 @@
 
   gap: 1rem;
 
-  .filter {
-    .buttons {
-      display: flex;
-      flex-wrap: wrap;
-
-      gap: 0.5rem;
-      margin-block-start: 1rem;
-
-      > * {
-        flex: 1 0 auto;
-      }
-    }
-  }
-
+ 
   .result {
     ul {
       display: grid;
