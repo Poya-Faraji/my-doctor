@@ -1,0 +1,10 @@
+.item {
+  display: grid;
+  place-content: center;
+
+  background-color: transparent;
+  color: inherit;
+  border: 1px solid currentColor;
+
+  border-radius: var(--border-radius);
+}
