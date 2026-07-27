@@ -13,14 +13,14 @@ const numbers = Array(100)
   .map((_, i) => i + 1);
 
 const OddOrEvenOptions = [
-  { value: "odd", label: "odd" },
-  { value: "even", label: "even" },
+  { key: "odd", label: "odd" },
+  { key: "even", label: "even" },
 ];
 
 const DividieOptions = [
-  { value: "three", label: "Divide by 3" },
-  { value: "five", label: "Divide by 5" },
-  { value: "seven", label: "Divide by 7" },
+  { key: "three", label: "Divide by 3" },
+  { key: "five", label: "Divide by 5" },
+  { key: "seven", label: "Divide by 7" },
 ];
 
 export default function SearchPage(): ReactNode {
