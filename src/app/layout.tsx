@@ -8,6 +8,7 @@ import FooterComponent from "@/components/footer/footer-component";
 
 import "@/styles/colors.css";
 import "@/styles/typography.css";
+import "@/styles/shadows.css";
 import "@/app/page.module.css";
 import "@/app/globals.css";
 
