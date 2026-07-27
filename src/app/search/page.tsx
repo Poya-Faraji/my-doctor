@@ -9,16 +9,23 @@ const numbers = Array(100)
   .fill(null)
   .map((_, i) => i + 1);
 
-const FilterOption = [
+const OddOrEvenOptions = [
   { value: "odd", label: "odd" },
   { value: "even", label: "even" },
+];
+
+const DividieOptions = [
+  { value: "three", label: "Divide by 3" },
+  { value: "five", label: "Divide by 5" },
+  { value: "seven", label: "Divide by 7" },
 ];
 
 export default function SearchPage(): ReactNode {
   return (
     <div className={styles.page}>
       <div className={styles.filter}>
-        <FilterComponent title="Odd or Even" options={FilterOption} />
+        <FilterComponent title="Odd or Even" options={OddOrEvenOptions} />
+        <FilterComponent title="Dividable" options={DividieOptions} />
       </div>
 
       <div className={styles.result}>
