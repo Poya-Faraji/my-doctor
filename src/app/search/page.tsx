@@ -5,7 +5,6 @@ import FilterProvider from "./providers/filters.provider";
 import FilterComponent from "./components/filter/filter.component";
 
 import styles from "@/app/search/page.module.css";
-import { FiltersType } from "./types/filters.types";
 import ListComponent from "./components/results/list.component";
 import ItemsProvider from "./providers/items/items.provider";
 
